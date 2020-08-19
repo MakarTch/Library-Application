@@ -66,10 +66,10 @@ public class Book {
 	@Override
 	public String toString() {
 		return "<tr><td>" + bookISBN + "</td><td>" + bookTitle + "</td><td>" + author + "</td><td>" + inStock
-				+ "</td></tr>";
+				+ "</td><td><input type=\"checkbox\" name=\"" + bookISBN + "\" ></td></tr>";
 	}
 	public static String tableHeader() {
-		String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th></tr>";
+		String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th><th>Put on Hold</th></tr>";
 		return header;
 	}
 	public static String tableFooter() {

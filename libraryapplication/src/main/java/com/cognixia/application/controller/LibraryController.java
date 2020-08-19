@@ -1,5 +1,7 @@
 package com.cognixia.application.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.cognixia.application.dao.AdminDAO;
 import com.cognixia.application.dao.BookDAO;
+import com.cognixia.application.dao.BorrowedDAO;
+import com.cognixia.application.dao.OnHoldDAO;
 import com.cognixia.application.dao.UserDAO;
 import com.cognixia.application.model.Admin;
 import com.cognixia.application.model.Book;
@@ -29,6 +33,10 @@ public class LibraryController {
 	AdminDAO adminRepo;
 	@Autowired
 	BookDAO bookRepo;
+	@Autowired
+	OnHoldDAO onHoldRepo;
+	@Autowired
+	BorrowedDAO borrowedRepo;
 	
 	@GetMapping("/")
 	public ModelAndView home(HttpSession session) {		
@@ -89,6 +97,19 @@ public class LibraryController {
 		mv.addObject("displayText", displayText);
 		return mv;
 	}
+	@GetMapping("/putonhold")
+	public ModelAndView putOnHold(HttpSession session) {
+		ModelAndView mv = new ModelAndView("putonhold.jsp");
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");  
+	    String strDate = formatter.format(date);  
+	    int userId = (int) session.getAttribute("userId");
+	    //looks like imma have to loop through the params, then add them one by one. 
+		//onHoldRepo.save(//params here); I just need the user id, easy, book isbn, easy, transacation time,easy
+		
+		return mv;
+	}
+	
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.setAttribute("userId", null);
