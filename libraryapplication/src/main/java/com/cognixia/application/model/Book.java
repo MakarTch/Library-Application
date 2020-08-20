@@ -80,6 +80,20 @@ public class Book {
 	public static String tableFooter() {
 		return "</table>";
 	}
+
+	public String withoutChecksToString() {
+		if(inStock<=0) {
+			return "";
+		}
+		return "<tr><td>" + bookISBN + "</td><td>" + bookTitle + "</td><td>" + author + "</td><td>" + inStock
+				+ "</td></tr>";
+	}
+	
+	
+	public static String withoutChecksTableHeader() {
+		String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th></tr>";
+		return header;
+	}
 	
 	
 

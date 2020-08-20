@@ -5,9 +5,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Put Off Borrow</title>
+<link rel="stylesheet" href="librarystyle.css">
 </head>
 <body>
+<div class="navbar"></div>
+<div class="content">
+<%out.println(session.getAttribute("pageHeader")); %>
+
 <h1> Book has been successfully returned!</h1>
-<a href="/">Go back to home</a>
+</div>
 </body>
 </html>

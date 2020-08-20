@@ -3,8 +3,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Create an Account</title>
+<link rel="stylesheet" href="librarystyle.css">
 </head>
 <body>
+<div class="navbar"></div>
+<div class="content">
+<%out.println(session.getAttribute("pageHeader")); %>
+
 Yeah its gonna be like what was I about to say, shit I was daydreaming. jeez.
 this is gonna be easy, just a form, create an object, add it to the shit. interesting. ill
 prolly end up using thymeleaf for this. it looks really simple. yeah tracking the session of the user vs admin
@@ -25,5 +30,6 @@ create account button. this is gonna be interesting.
 <input type="submit" value="Create Account!">
 </form>
 <h2>Please contact administrator for a new Admin account</h2>
+</div>
 </body>
 </html>

@@ -74,5 +74,17 @@ public class Admin {
 				+ ", firstName=" + firstName + ", email=" + email + ", phoneNumber=" + phoneNumber + "]";
 	}
 	
+	public static String headerString() {
+		//about us, location, catalog, currently on hold, corrently borrowed, log out
+		String headerString = "<a href= \"/\">Home</a>"
+				+ "<a href=\"/aboutus.jsp\">About Us</a>"  
+				+ "<a href=\"/location.jsp\">Location</a>"
+				+ "<a href=\"/catalog\">Catalog</a>"
+				+ "<a href=\"/currentlyonhold\">Currently on hold</a>" 
+				+ "<a href=\"/currentlyborrowed\">Currently borrowed</a>"
+				+ "<a href=\"/logout\">Log out</a><br>";
+		return headerString;
+	}
+	
 	
 }

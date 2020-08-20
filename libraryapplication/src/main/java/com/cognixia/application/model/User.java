@@ -86,7 +86,26 @@ public class User {
 		return "User [userId=" + userId + ", userPassword=" + userPassword + ", lastName=" + lastName + ", firstName="
 				+ firstName + ", email=" + email + ", phoneNumber=" + phoneNumber + "]";
 	}
-	
+
+	public static String nonUserHeaderString() {
+		//about us, location, catalog, create and account, log in
+		String headerString = "<a href= \"/\">Home</a>"
+				+ "<a href=\"/aboutus.jsp\">About Us</a>"
+				+ "<a href=\"/location.jsp\">Location</a>"
+				+ "<a href=\"/catalog\">Catalog</a>"
+				+ "<a href=\"/createaccount.jsp\">Create an account</a>"
+				+ "<a href=\"/login.jsp\">Log in</a>";
+		return headerString;
+	}
+	public static String headerString() {
+		//about us, location, catalog, log out, and gotta make an account info later on
+		String headerString = "<a href= \"/\">Home</a>"
+				+ "<a href=\"/aboutus.jsp\">About Us</a>"
+				+ "<a href=\"/location.jsp\">Location</a>"
+				+ "<a href=\"/catalog\">Catalog</a>"
+				+ "<a href=\"/logout\">Log out</a><br>";
+		return headerString;
+	}
 	
 	
 }

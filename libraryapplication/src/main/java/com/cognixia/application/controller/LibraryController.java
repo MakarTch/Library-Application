@@ -39,31 +39,28 @@ public class LibraryController {
 	@GetMapping("/")
 	public ModelAndView home(HttpSession session) {		
 		ModelAndView mv = new ModelAndView("index.jsp");
+		String pageHeader = User.nonUserHeaderString();
+		session.setAttribute("pageHeader", pageHeader);
 		if (session.getAttribute("userId") != null) {
-			System.out.println("setting userid attribute");
-			User user = new User();
-			int userId = (int) session.getAttribute("userId");
-			user.setUserId(userId);
-			mv.addObject(user);
+			pageHeader = User.headerString();
+			session.setAttribute("pageHeader", pageHeader);
 		}
 		if (session.getAttribute("adminId") !=null) {
-			System.out.println("setting adminid attribute");
-			Admin admin = new Admin();
-			int adminId = (int) session.getAttribute("adminId");
-			admin.setAdminId(adminId);
-			mv.addObject(admin);
+			pageHeader = Admin.headerString();
+			session.setAttribute("pageHeader", pageHeader);
 		}
 		return mv;
 	}
+
+	
 	@GetMapping("/userAccount")
 	public String userAccount(@RequestParam int userId, @RequestParam String userPassword, HttpSession session) {
 		if(userRepo.existsByUserIdAndUserPassword(userId, userPassword)){
-			System.out.println("This combination of userid and password exists");
 			session.setAttribute("userId", userId);
 			session.setAttribute("adminId", null);
+			session.setAttribute("pageHeader", User.headerString());
 		}else {
-			//return the login page, yeah shit it would be dope if js could just be like oh na do that shit again. I would need node for that
-			//so I can do the same thing I did last time, just return the same page just with an error messge, call it error login
+			//error login page
 		}
 		return ("/");
 	}
@@ -71,29 +68,37 @@ public class LibraryController {
 	@GetMapping("/adminAccount")
 	public String adminAccount(@RequestParam int adminId, @RequestParam String adminPassword, HttpSession session) {
 		if (adminRepo.existsByAdminIdAndAdminPassword(adminId, adminPassword)) {
-			System.out.println("This combination of adminid and password exists");
 			session.setAttribute("adminId", adminId);
 			session.setAttribute("userId", null);
+			session.setAttribute("pageHeader", Admin.headerString());
+		}else {
+			//error login page
 		}
 		return "/";
 	}
 	@GetMapping("/createaccount")
 	public String createaccount(User user) {
 		userRepo.save(user);
-		return "login.html";
+		return "/";//or maybe an account created thing, or straight to the login page, somethign like that
 	}
+	
+
 	@GetMapping("/catalog")
-	public ModelAndView catalog() {
+	public ModelAndView catalog(HttpSession session) {
 		ModelAndView mv = new ModelAndView("catalog.jsp");
 		//creating table
 		List <Book> bookList = bookRepo.findAll();
-		String displayText = Book.tableHeader();
+		String displayText = (session.getAttribute("userId")!=null)?Book.tableHeader():Book.withoutChecksTableHeader();
 		for (Book book : bookList) {
-			displayText+= book.toString();
+			if (session.getAttribute("userId")!=null) {
+				displayText+= book.toString();
+			}else {
+				displayText+= book.withoutChecksToString();
+			}
 		}
 		displayText += Book.tableFooter();
 		mv.addObject("displayText", displayText);
-		return mv;//I gotta make this so that the books with a stock of 0 font display
+		return mv;//I gotta make this so that the books with a stock of 0 dont display
 	}
 	@GetMapping("/putonhold")
 	public ModelAndView putOnHold(HttpSession session, HttpServletRequest request) {
@@ -126,11 +131,7 @@ public class LibraryController {
 		displayText += OnHold.tableFooter();
 		mv.addObject("displayText", displayText);
 		return mv;
-	}/*ok my thoughts are a little blurry with this, only admin can come here, yes, ill input a session id attribute later, yeah.
-	its gonna be a list of all books that are on hold, then the admin is going to check when the user is physically in store to pick the books up, 
-	then the thangs are going to be moved from onhold to borrowed with a time stamp on it, similar to catalog.
-	might end up adding book title to this table, its not too user friendly with just the usbn like it is now.
-	*/
+	}
 	
 	@GetMapping("/putonborrow")
 	public ModelAndView putOnBorrow(HttpSession session, HttpServletRequest request) {
@@ -142,7 +143,6 @@ public class LibraryController {
 		for (String value : values) {
 			OnHold onHold = onHoldRepo.findByTransactionId(Integer.parseInt(value));
 			onHoldRepo.delete(onHold);
-			//onHold.setTransactionTime(strDate);
 			Borrowed newBorrowedBook = new Borrowed(onHold.getUserId(), onHold.getBookISBN(),strDate);
 			borrowedRepo.save(newBorrowedBook);
 		}
@@ -184,6 +184,6 @@ public class LibraryController {
 		session.setAttribute("userId", null);
 		session.setAttribute("adminId", null);
 		System.out.println("userid and adminid are null");
-		return "index.jsp";
+		return "/";
 	}
 }

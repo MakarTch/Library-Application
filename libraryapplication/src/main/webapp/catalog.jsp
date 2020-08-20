@@ -5,12 +5,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Book Catalog</title>
+<link rel="stylesheet" href="librarystyle.css">
 </head>
 <body>
+<div class="navbar"></div>
+<div class="content">
 <form action="/putonhold">
+<%out.println(session.getAttribute("pageHeader")); %>
 ${displayText}
 <input type="submit" value="Put on Hold!">
 </form>
+</div>
 </body>
 </html>
 <!-- oh snap imma have to make it a thing not to show the submit button if the user isnt logged in, or just not let them see the catalog
