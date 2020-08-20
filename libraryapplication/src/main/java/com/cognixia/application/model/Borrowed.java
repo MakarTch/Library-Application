@@ -1,5 +1,6 @@
 package com.cognixia.application.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class Borrowed {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int transactionId;
 	private int userId;
+	@Column(name="book_isbn")
 	private long bookISBN;
 	private String transactionTime;
 	
@@ -24,6 +26,14 @@ public class Borrowed {
 		this.bookISBN = bookISBN;
 		this.transactionTime = transactionTime;
 	}
+
+	public Borrowed(int userId, long bookISBN, String transactionTime) {
+		super();
+		this.userId = userId;
+		this.bookISBN = bookISBN;
+		this.transactionTime = transactionTime;
+	}
+
 
 	public Borrowed() {
 		super();
@@ -61,11 +71,20 @@ public class Borrowed {
 		this.transactionTime = transactionTime;
 	}
 
+	public static String tableHeader() {
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th><th>Returned</th></tr>";
+		return header;
+	}
+
 	@Override
 	public String toString() {
-		return "Borrowed [transactionId=" + transactionId + ", userId=" + userId + ", bookISBN=" + bookISBN
-				+ ", transactionTime=" + transactionTime + "]";
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + transactionId + "\" ></td></tr>";
 	}
+
+	public static String tableFooter() {
+		return "</table>";
+}
 	
 	
 

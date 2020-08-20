@@ -6,5 +6,5 @@ import com.cognixia.application.model.Borrowed;
 
 @Repository
 public interface BorrowedDAO extends JpaRepository<Borrowed, Integer>{
-
+	public Borrowed findByTransactionId(int transacationId);
 }

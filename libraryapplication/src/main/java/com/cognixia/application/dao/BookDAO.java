@@ -6,5 +6,7 @@ import com.cognixia.application.model.Book;
 
 @Repository
 public interface BookDAO extends JpaRepository<Book, Long>{
+	
+	public Book findByBookISBN(long isbn);
 
 }

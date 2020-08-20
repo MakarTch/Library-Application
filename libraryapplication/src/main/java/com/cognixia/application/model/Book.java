@@ -17,9 +17,9 @@ public class Book {
 	private Long bookISBN;
 	private String bookTitle;
 	private String author;
-	private String inStock;
+	private int inStock;
 	
-	public Book(Long bookISBN, String bookTitle, String author, String inStock) {
+	public Book(Long bookISBN, String bookTitle, String author, int inStock) {
 		super();
 		this.bookISBN = bookISBN;
 		this.bookTitle = bookTitle;
@@ -43,7 +43,7 @@ public class Book {
 		return author;
 	}
 
-	public String getInStock() {
+	public int getInStock() {
 		return inStock;
 	}
 
@@ -59,19 +59,24 @@ public class Book {
 		this.author = author;
 	}
 
-	public void setInStock(String inStock) {
+	public void setInStock(int inStock) {
 		this.inStock = inStock;
 	}
-
+	
+	public static String tableHeader() {
+			String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th><th>Put on Hold</th></tr>";
+			return header;
+		}
+	
 	@Override
 	public String toString() {
+		if(inStock<=0) {
+			return "";
+		}
 		return "<tr><td>" + bookISBN + "</td><td>" + bookTitle + "</td><td>" + author + "</td><td>" + inStock
-				+ "</td><td><input type=\"checkbox\" name=\"" + bookISBN + "\" ></td></tr>";
+				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + bookISBN + "\" ></td></tr>";
 	}
-	public static String tableHeader() {
-		String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th><th>Put on Hold</th></tr>";
-		return header;
-	}
+	
 	public static String tableFooter() {
 		return "</table>";
 	}

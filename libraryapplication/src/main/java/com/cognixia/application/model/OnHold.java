@@ -1,10 +1,15 @@
 package com.cognixia.application.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cognixia.application.dao.BookDAO;
 
 @Entity
 @Table(name="on_hold")
@@ -14,6 +19,7 @@ public class OnHold {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int transactionId;
 	private int userId;
+	@Column(name="book_isbn")
 	private long bookISBN;
 	private String transactionTime;
 	
@@ -24,7 +30,15 @@ public class OnHold {
 		this.bookISBN = bookISBN;
 		this.transactionTime = transactionTime;
 	}
+	
 
+	public OnHold(int userId, long bookISBN, String transactionTime) {
+		super();
+		this.userId = userId;
+		this.bookISBN = bookISBN;
+		this.transactionTime = transactionTime;
+	}
+	
 	public OnHold() {
 		super();
 	}
@@ -60,13 +74,21 @@ public class OnHold {
 	public void setTransactionTime(String transactionTime) {
 		this.transactionTime = transactionTime;
 	}
+	
+	public static String tableHeader() {
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th><th>Put in Borrow</th></tr>";
+		return header;
+	}
 
 	@Override
 	public String toString() {
-		return "OnHold [transactionId=" + transactionId + ", userId=" + userId + ", bookISBN=" + bookISBN
-				+ ", transactionTime=" + transactionTime + "]";
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + transactionId + "\" ></td></tr>";
 	}
-	
+
+	public static String tableFooter() {
+		return "</table>";
+}
 	
 	
 	

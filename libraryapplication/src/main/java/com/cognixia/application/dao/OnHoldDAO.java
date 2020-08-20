@@ -7,5 +7,5 @@ import com.cognixia.application.model.OnHold;
 
 @Repository
 public interface OnHoldDAO extends JpaRepository<OnHold, Integer> {
-
+	public OnHold findByTransactionId(int transactionId);
 }
