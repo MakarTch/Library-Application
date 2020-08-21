@@ -51,7 +51,6 @@ public class LibraryController {
 		}
 		return mv;
 	}
-
 	
 	@GetMapping("/userAccount")
 	public String userAccount(@RequestParam int userId, @RequestParam String userPassword, HttpSession session) {
@@ -81,7 +80,6 @@ public class LibraryController {
 		userRepo.save(user);
 		return "/";//or maybe an account created thing, or straight to the login page, somethign like that
 	}
-	
 
 	@GetMapping("/catalog")
 	public ModelAndView catalog(HttpSession session) {
@@ -175,6 +173,22 @@ public class LibraryController {
 			
 		}
 		String displayText = (values.length>1)?"books":"book";
+		mv.addObject("displayText", displayText);
+		return mv;
+	}
+	@GetMapping("/userinfo")
+	public ModelAndView userInfo(HttpSession session) {
+		ModelAndView mv = new ModelAndView("userinfo.jsp");
+		String displayText = OnHold.withoutChecksTableHeader();
+		//ok so add objects of display to the shit. I need a header for these tables I
+		// havent made tables for these before. man I know theres a function for that shit. find all by id, fuck
+		// so distracted rn, imma go eat instead, nope Im gonna finsih this.
+		List <OnHold> onHoldList = onHoldRepo.findAllByUserId((int)session.getAttribute("userId"));
+		for (OnHold onHold : onHoldList) {
+				displayText+= onHold.withoutChecksToString();
+		}
+		displayText += OnHold.tableFooter();
+		//ill probably put these into different strings so that I can put a heading in betweem them
 		mv.addObject("displayText", displayText);
 		return mv;
 	}

@@ -6,6 +6,8 @@
 <meta charset="ISO-8859-1">
 <title>Put on Hold!</title>
 <link rel="stylesheet" href="librarystyle.css">
+<link rel="icon" href="https://www.clipartmax.com/png/middle/155-1559319_learn-open-book-icon-vector.png">
+
 </head>
 <body>
 <div class="navbar"></div>

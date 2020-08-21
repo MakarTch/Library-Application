@@ -79,13 +79,24 @@ public class OnHold {
 		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th><th>Put in Borrow</th></tr>";
 		return header;
 	}
+	
+	public static String withoutChecksTableHeader() {
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th></tr>";
+		return header;
+	}
 
 	@Override
 	public String toString() {
 		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
 				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + transactionId + "\" ></td></tr>";
 	}
+	
+	public String withoutChecksToString() {
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+				+ "</td></tr>";
+	}
 
+	
 	public static String tableFooter() {
 		return "</table>";
 }

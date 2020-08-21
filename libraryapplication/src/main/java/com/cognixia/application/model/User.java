@@ -89,21 +89,24 @@ public class User {
 
 	public static String nonUserHeaderString() {
 		//about us, location, catalog, create and account, log in
-		String headerString = "<a href= \"/\">Home</a>"
-				+ "<a href=\"/aboutus.jsp\">About Us</a>"
-				+ "<a href=\"/location.jsp\">Location</a>"
-				+ "<a href=\"/catalog\">Catalog</a>"
-				+ "<a href=\"/createaccount.jsp\">Create an account</a>"
-				+ "<a href=\"/login.jsp\">Log in</a>";
+		String headerString = "<img src=\"libraryimage.jpg\" alt=\"checkin_pic\" width=\"98%\" style=\"margin-left:auto; margin-right:auto; display:block\">"
+				+ "<ul><li><a href= \"/\">Home</a></li>"
+				+ "<li><a href=\"/aboutus.jsp\">About Us</a></li>"
+				+ "<li><a href=\"/location.jsp\">Location</a></li>"
+				+ "<li><a href=\"/catalog\">Catalog</a></li>"
+				+ "<li style=\"float:right\"><a href=\"/createaccount.jsp\">Create an account</a></li>"
+				+ "<li style=\"float:right\"><a href=\"/login.jsp\">Log in</a></li></ul>";
 		return headerString;
 	}
 	public static String headerString() {
 		//about us, location, catalog, log out, and gotta make an account info later on
-		String headerString = "<a href= \"/\">Home</a>"
-				+ "<a href=\"/aboutus.jsp\">About Us</a>"
-				+ "<a href=\"/location.jsp\">Location</a>"
-				+ "<a href=\"/catalog\">Catalog</a>"
-				+ "<a href=\"/logout\">Log out</a><br>";
+		String headerString = "<img src=\"libraryimage.jpg\" alt=\"checkin_pic\" width=\"98%\" style=\"margin-left:auto; margin-right:auto; display:block\">"
+				+ "<ul><li><a href= \"/\">Home</a></li>"
+				+ "<li><a href=\"/aboutus.jsp\">About Us</a></li>"
+				+ "<li><a href=\"/location.jsp\">Location</a></li>"
+				+ "<li><a href=\"/catalog\">Catalog</a></li>"
+				+ "<li><a href = \"userinfo\">User Info</a></li>"
+				+ "<li style=\"float:right\"><a href=\"/logout\">Log out</a></li></ul>";
 		return headerString;
 	}
 	

@@ -20,7 +20,7 @@ that I want to do for the picture above the header, yeah making those boxes on t
 }
 html, body{
 	margin:0;
-	font-size:16px;
+	font-size:20px;
 	background-color:#f2f2f2;   /*        */
 	/*height:100%;	*/
 	letter-spacing:1px;
@@ -43,11 +43,11 @@ html, body{
 	float:left;
 	width:70%;
 	/*height:98%;*/
-	padding:40px 120px;
-	background-color:white;
-    box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);
+	/*padding:40px 0px;*/
+	/*background-color:white;*/
+    /*box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);*/
 }
- /* all form and table*/ 
+ /* all forms and tables*/ 
 form{
 	margin-left:20px;
 }
@@ -75,7 +75,7 @@ input[type="submit"]{
 	font-size:0.8em;
 	cursor:pointer;
 	transition:0.5s;
-	border: var(--main-color));/*            */
+	border: var(--main-color);/*            */
     color:var(--main-color);/*            */
     background-color:white;
 }
@@ -109,7 +109,7 @@ table{
 	margin-top:10px;
 	margin-top:10px;
 	/*width:70%;*/
-	outline:4px ridge var(--lighter-main-color);/*            */
+	/*outline:4px ridge var(--lighter-main-color);*//*            */
 	border-collapse:collapse;	
 }
 tr{
@@ -131,6 +131,35 @@ th{
 }
 tr:nth-child(even) {
 	/*background-color:rgb(245,245,245);*/
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: white;
+  border-radius:10px; 	
+  
+}
+
+li {
+  float: left;
+  font-size:16px;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(204, 204, 255);
+  transition:0.5s;
+  color: black;
 }
 
 

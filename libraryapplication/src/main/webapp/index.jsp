@@ -4,18 +4,16 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 <link rel="stylesheet" href="librarystyle.css">
+<link rel="icon" href="https://www.clipartmax.com/png/middle/155-1559319_learn-open-book-icon-vector.png">
 </head>
 <body>
-<div>
+
 <div class="navbar"></div>
 <div class="content">
-picture here, maybe with a logo on the left
+
 <%out.println(session.getAttribute("pageHeader")); %>
+<h1>Welcome to the library!</h1>
 
-Man i really want to have that slide in rectangle shit that that website has, that shit is dope
-
-
-</div>
 <!--  
 <h1>This be that home page you already know</h1>
 <h5>for all, no change ( only change in header)</h5>

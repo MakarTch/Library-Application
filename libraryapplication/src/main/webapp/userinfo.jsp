@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Currently Borrowed</title>
+<title>insert user name info?</title>
 <link rel="stylesheet" href="librarystyle.css">
 <link rel="icon" href="https://www.clipartmax.com/png/middle/155-1559319_learn-open-book-icon-vector.png">
 
@@ -12,12 +12,8 @@
 <body>
 <div class="navbar"></div>
 <div class="content">
-<%out.println(session.getAttribute("pageHeader")); %>
-
-<form action="/putoffborrow">
+${pageHeader}
 ${displayText}
-<input type="submit" value="Submit">
-</form>
 </div>
 </body>
 </html>
