@@ -14,36 +14,92 @@
 <%out.println(session.getAttribute("pageHeader")); %>
 <h1>Welcome to the library!</h1>
 
-<!--  
-<h1>This be that home page you already know</h1>
-<h5>for all, no change ( only change in header)</h5>
-<a href="/aboutus.html">About Us</a>	 Focus on this when doing front end
-<a href="/location.html">Location</a>	Focus on this when doing front end 
-<h5>For all, no form for admins and non users</h5>
-<a href="/catalog">Catalog</a>
-<h5>Only for non users</h5>
-<a href="/createaccount.html">Create an account</a>
-<a href="/login.html">Log in</a>
-<h5>Only for users and admins</h5>
-<a href="/logout">Log out</a><br>Yeah I for sure have to figure out how to change the navbar using React 
-<h5>Only for admins</h5>
-<a href="/currentlyonhold">Currently on hold</a>
-<a href="/currentlyborrowed">Currently borrowed</a>
-<div id="root1"></div>
--->
+<div class="footer">
+  <div style="padding:20px 0;width:30%;float:left">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/New_York_Public_Library_logo.svg/1200px-New_York_Public_Library_logo.svg.png" width=90%>
+  </div>
+  <div style="margin:20px;padding:20px 0;width:30%;float:left">
+  	10 Grand Army Plaza<br>
+    Brooklyn, NY 11238<br>
+    (718)-230-2100<br>
+  </div>
+  <div style="padding:20px 0;width:30%;float:left">
+  	<table>
+    	<tr>
+        	<td>Monday</td>
+            <td>10:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Tuesday</td>
+            <td>1:00 PM - 7:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Wednesday</td>
+            <td>10:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Thursday</td>
+            <td>1:00 PM - 7:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Friday</td>
+            <td>10:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Saturday</td>
+            <td>10:00 AM - 4:00 PM</td>
+        </tr>
+        <tr>
+        	<td>Sunday</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+  </div>
+</div>
 
-<!-- yeah so the tricky part is going to be changing the header of this page so that when I'm logged in , the log in button is out
-and also vice versa, I know react can do some shit like that. 
-
-yeah so only show the catalog to people who are logged in?
-
-I need to also fuck i forgot, oh yeah, have a account info link that shows where the user has book on hold and what books are due to be return and shit,
-interesting actually yeah
- -->
- </div>
+</div>
 <script>
 document.getElementById("root1").innerHTML="Check it out"
-
 </script>
 </body>
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: black;
+   padding:0 30px;
+   /*text-align: center;*/
+   /*padding:40px 40px;*/
+}
+</style>
+</head>
+<body>
+
+<h2>Fixed/Sticky Footer Example</h2>
+<p>The footer is placed at the bottom of the page.</p>
+
+<div class="footer">
+  <div style="padding:20px 0;width:30%;float:left">
+  	1000 Fourth ave<br> Seattle WA 98104-1109<br>347-987-1235
+  </div>
+  <div style="padding:20px 0;width:30%;float:left">
+  	here
+  </div>
+  <div style="padding:20px 0;width:30%;float:left">
+  	and here
+  </div>
+</div>
+
+</body>
+</html> 
+
+ -->

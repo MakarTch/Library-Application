@@ -179,17 +179,22 @@ public class LibraryController {
 	@GetMapping("/userinfo")
 	public ModelAndView userInfo(HttpSession session) {
 		ModelAndView mv = new ModelAndView("userinfo.jsp");
-		String displayText = OnHold.withoutChecksTableHeader();
-		//ok so add objects of display to the shit. I need a header for these tables I
-		// havent made tables for these before. man I know theres a function for that shit. find all by id, fuck
-		// so distracted rn, imma go eat instead, nope Im gonna finsih this.
+		String onHoldDisplayText = OnHold.withoutChecksTableHeader();
 		List <OnHold> onHoldList = onHoldRepo.findAllByUserId((int)session.getAttribute("userId"));
 		for (OnHold onHold : onHoldList) {
-				displayText+= onHold.withoutChecksToString();
+				onHoldDisplayText+= onHold.withoutChecksToString();
 		}
-		displayText += OnHold.tableFooter();
-		//ill probably put these into different strings so that I can put a heading in betweem them
-		mv.addObject("displayText", displayText);
+		onHoldDisplayText += OnHold.tableFooter();
+		mv.addObject("OnHoldDisplayText", onHoldDisplayText);
+		
+		String borrowDisplayText = Borrowed.withoutChecksTableHeader();
+		List <Borrowed> borrowList = borrowedRepo.findAllByUserId((int)session.getAttribute("userId"));
+		for (Borrowed borrow : borrowList) {
+				borrowDisplayText+= borrow.withoutChecksToString();
+		}
+		borrowDisplayText += Borrowed.tableFooter();
+		mv.addObject("BorrowedDisplayText", borrowDisplayText);
+		
 		return mv;
 	}
 	

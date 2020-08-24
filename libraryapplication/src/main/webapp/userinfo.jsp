@@ -13,7 +13,10 @@
 <div class="navbar"></div>
 <div class="content">
 ${pageHeader}
-${displayText}
+<h3>What you have on hold</h3>
+${OnHoldDisplayText}
+<h3>What you are currently borrowing</h3>
+${BorrowedDisplayText}
 </div>
 </body>
 </html>

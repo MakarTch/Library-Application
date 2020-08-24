@@ -85,6 +85,16 @@ public class Borrowed {
 	public static String tableFooter() {
 		return "</table>";
 }
+
+	public static String withoutChecksTableHeader() {
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th></tr>";
+		return header;
+	}
+
+	public String withoutChecksToString() {
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+				+ "</td></tr>";
+	}
 	
 	
 
