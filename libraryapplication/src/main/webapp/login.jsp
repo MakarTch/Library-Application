@@ -36,5 +36,7 @@
 </tr>
 </table>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

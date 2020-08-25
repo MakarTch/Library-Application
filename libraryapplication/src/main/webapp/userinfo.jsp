@@ -18,5 +18,7 @@ ${OnHoldDisplayText}
 <h3>What you are currently borrowing</h3>
 ${BorrowedDisplayText}
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

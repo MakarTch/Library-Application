@@ -16,5 +16,7 @@
 
 <h1> Transaction is complete! The user may take their ${displayText}.</h1>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

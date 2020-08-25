@@ -31,54 +31,10 @@ Central Library is Brooklyn's home library, and one of New York City's foremost 
 <p style="width:40%">
 Central Library receives more than 1.2 million visits each year, and items from its collections circulate 1.6 million times.
 </p>
-<div class="footer">
-  <div style="padding:20px 0;width:30%;float:left">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/New_York_Public_Library_logo.svg/1200px-New_York_Public_Library_logo.svg.png" width=90%>
-  </div>
-  
-  <div style="margin:20px;padding:20px 0;width:30%;float:left">
-  	10 Grand Army Plaza<br>
-    Brooklyn, NY 11238<br>
-    (718)-230-2100<br>
-  </div>
-  
-  <div style="padding:20px 0;width:30%;float:left">
-  	<table>
-    	<tr>
-        	<td>Monday</td>
-            <td>10:00 AM - 4:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Tuesday</td>
-            <td>1:00 PM - 7:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Wednesday</td>
-            <td>10:00 AM - 4:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Thursday</td>
-            <td>1:00 PM - 7:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Friday</td>
-            <td>10:00 AM - 4:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Saturday</td>
-            <td>10:00 AM - 4:00 PM</td>
-        </tr>
-        <tr>
-        	<td>Sunday</td>
-            <td>Closed</td>
-        </tr>
-    </table>
-  </div>
 
 
-
-
- 
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

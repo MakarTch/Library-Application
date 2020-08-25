@@ -20,5 +20,7 @@ ${displayText }
 <input type="submit" value="Put into Borrow">
 </form>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

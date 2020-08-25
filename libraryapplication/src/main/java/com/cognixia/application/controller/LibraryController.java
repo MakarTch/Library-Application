@@ -40,7 +40,9 @@ public class LibraryController {
 	public ModelAndView home(HttpSession session) {		
 		ModelAndView mv = new ModelAndView("index.jsp");
 		String pageHeader = User.nonUserHeaderString();
+		String pageFooter = User.footerString();
 		session.setAttribute("pageHeader", pageHeader);
+		session.setAttribute("pageFooter", pageFooter);
 		if (session.getAttribute("userId") != null) {
 			pageHeader = User.headerString();
 			session.setAttribute("pageHeader", pageHeader);

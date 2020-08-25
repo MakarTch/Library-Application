@@ -17,5 +17,7 @@
 <h1>Your ${books} been put on hold!</h1>
 
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

@@ -19,5 +19,7 @@ ${displayText}
 <input type="submit" value="Submit">
 </form>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

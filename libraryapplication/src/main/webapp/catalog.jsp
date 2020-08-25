@@ -18,6 +18,8 @@ ${displayText}
 <input type="submit" value="Put on Hold!">
 </form>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>
 <!-- oh snap imma have to make it a thing not to show the submit button if the user isnt logged in, or just not let them see the catalog

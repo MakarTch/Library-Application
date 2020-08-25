@@ -109,6 +109,67 @@ public class User {
 				+ "<li style=\"float:right\"><a href=\"/logout\">Log out</a></li></ul>";
 		return headerString;
 	}
-	
+	public static String footerString() {
+		return "<div class=\"footer\">\r\n" + 
+				"	<table style=\"width: 100%\">\r\n" + 
+				"		<tr>\r\n" + 
+				"			<td style=\"width: 20%\"><img\r\n" + 
+				"				src=\"https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/New_York_Public_Library_logo.svg/1200px-New_York_Public_Library_logo.svg.png\"\r\n" + 
+				"				style=\"width: 100%\"></td>\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"			<td>\r\n" + 
+				"				<div style=\"padding: 20px; margin: auto; font-size: 1.1em\">\r\n" + 
+				"					10 Grand Army Plaza<br> Brooklyn, NY 11238<br>\r\n" + 
+				"					(718)-230-2100<br> <br style=\"line-height: 0.5em\"> <a href=\"/\">Home</a><br> <a\r\n" + 
+				"						href=\"/aboutus.jsp\">About Us</a><br> <a href=\"/location.jsp\">Location</a><br>\r\n" + 
+				"				</div>\r\n" + 
+				"			</td>\r\n" + 
+				"\r\n" + 
+				"			<td>\r\n" + 
+				"				<div>\r\n" + 
+				"					<table style=\"padding: 10px 0; margin: 0; font-size: 0.8em;\">\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Monday</td>\r\n" + 
+				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Tuesday</td>\r\n" + 
+				"							<td>1:00 PM - 7:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Wednesday</td>\r\n" + 
+				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Thursday</td>\r\n" + 
+				"							<td>1:00 PM - 7:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Friday</td>\r\n" + 
+				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Saturday</td>\r\n" + 
+				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"						<tr style=\"border-bottom: none\">\r\n" + 
+				"							<td>Sunday</td>\r\n" + 
+				"							<td>Closed</td>\r\n" + 
+				"						</tr>\r\n" + 
+				"					</table>\r\n" + 
+				"				</div>\r\n" + 
+				"			</td>\r\n" + 
+				"			<td style=\"width: 40%\">\r\n" + 
+				"				<div style=\"\">\r\n" + 
+				"					<img\r\n" + 
+				"						src=\"https://cdn-d8.nypl.org/s3fs-public/2020-05/NYPL_MainFacadeRev2Cam2.png\"\r\n" + 
+				"						style=\"width: 100%\">\r\n" + 
+				"				</div>\r\n" + 
+				"			</td>\r\n" + 
+				"		</tr>\r\n" + 
+				"	</table>\r\n" + 
+				"</div>\r\n";
+	}
 	
 }

@@ -29,27 +29,36 @@ html, body{
 	/*background-image:linear-gradient(var(--light-main-color),var(--main-color));           */
 }
 .navbar{
-	/*background-color:black;*/
 	float:left;
 	width:15%;
 	padding:15px 25px;
 	font-size:0.9em;
 }
-.navbar a{
-	font-size:1em;
-	margin-bottom:10px;
-}
-
 .content{
 	/*margin-top:0;*/
 	float:left;
 	width:70%;
 	/*height:98%;*/
-	/*padding:40px 0px;*/
+	/*padding:40px;*/
 	background-color:white;/* Yeah prolly gonna have to make an inner content part of the page*/
     /*box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);*/
     /*border-radius:10px; maybe put this back in */	
-    overflow:hidden;
+    /*overflow:hidden;*/
+}
+.footer {
+   /*position: sticky;*/
+   /*margin-top:30px;*/
+   float:left;
+   margin-left:15%;
+   /*left: 0;
+   bottom: 0;*/
+   width: 70%;
+   /*height:auto;*/
+   /*background-color:lightblue; */
+   background-image:linear-gradient(rgb(77, 136, 255),rgb(204, 221, 255));   
+   color: black;
+   padding:0 30px;
+   /*border-style:solid;*/
 }
  /* all forms and tables*/ 
 form{
@@ -194,16 +203,4 @@ span.mta-bullet { display: inline-block; }
 .mta-4, .mta-5, .mta-6, .mta-456 { background-color: #00933C; }
 .mta-7 { background-color: #B933AD; }
 
-/*Footer*/
-.footer {
-   /*position: sticky;*/
-   /*margin-top:30px;*/
-   margin-left:15%;
-   /*left: 0;
-   bottom: 0;*/
-   width: 70%;
-   background-color:black;   
-   color: black;
-   padding:0 30px;
-   /*border-style:solid;*/
-}
+

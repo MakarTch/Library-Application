@@ -16,5 +16,7 @@
 
 <h1> Book has been successfully returned!</h1>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>

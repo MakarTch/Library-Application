@@ -12,12 +12,6 @@
 <div class="content">
 <%out.println(session.getAttribute("pageHeader")); %>
 
-Yeah its gonna be like what was I about to say, shit I was daydreaming. jeez.
-this is gonna be easy, just a form, create an object, add it to the shit. interesting. ill
-prolly end up using thymeleaf for this. it looks really simple. yeah tracking the session of the user vs admin
-might be a bit a lot. not crazy bad tho. I just have to display the user/admin name on the top right to replace the login/
-create account button. this is gonna be interesting. 
-<h3>Enter your new account info</h3>
 <form action="/createaccount">
 <label for="firstName">First Name</label>
 <input type="text"  name="firstName" autocomplete ="off" required><br>
@@ -33,5 +27,7 @@ create account button. this is gonna be interesting.
 </form>
 <h2>Please contact administrator for a new Admin account</h2>
 </div>
+<%out.println(session.getAttribute("pageFooter"));%>
+
 </body>
 </html>
