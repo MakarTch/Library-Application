@@ -29,6 +29,7 @@ img {
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  background-color:black;
 }
 
 .next {
@@ -44,22 +45,20 @@ img {
 </style>
 </head>
 <body>
-<div style="width:50%; height:100% ;"></div>
-<div class="navbar"></div>
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
+<%out.println(session.getAttribute("pageHeader")); %>
+
 <div class="content">
 
-<%out.println(session.getAttribute("pageHeader")); %>
-<h1>Welcome to Central Library website!</h1>
+<h1>Welcome to the Central Library website!</h1>
+		<hr style="margin: 5px">
 <p>Located by Brooklyn's Prospect Park, the Brooklyn Public Library Central Branch has been serving the residents of 
-Brooklyn since 1941. Create and account or log in to put your desired book(s) on hold, them come to our location to pick them up!
-(If you're not feeling up to all the work of creating a new account, you may log in as a user with a User ID of <i>1</i> and password of <i>password</i>).</p>
+Brooklyn since 1941. Create an account or log in to put your desired book(s) on hold, then come to our location to pick them up!</p>
+<p>If you're not feeling up to all the work of creating a new account, you may log in as a user with a User ID of <i>1</i> and password of <i>password</i>.
+To use Admin privileges you may log in with Admin ID of <i>1000</i> and password of <i>password</i>.</p>
 <div class="container">
   <div class="mySlides">
     <img src="DSC05934.JPG" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <img src="libraryimage2.JPG" style="width:100%">
   </div>
 
   <div class="mySlides">
@@ -69,7 +68,10 @@ Brooklyn since 1941. Create and account or log in to put your desired book(s) on
   <div class="mySlides">
     <img src="DSC05967.JPG" style="width:100%">
   </div>
-
+  
+  <div class="mySlides">
+    <img src="libraryimage2.JPG" style="width:100%">
+  </div>
     
   <a class="prev" onclick="plusSlides(-1)">&#171;</a>
   <a class="next" onclick="plusSlides(1)">&#187;</a>

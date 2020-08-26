@@ -89,23 +89,23 @@ public class User {
 
 	public static String nonUserHeaderString() {
 		//about us, location, catalog, create and account, log in
-		String headerString = "<img src=\"libraryimage.jpg\" alt=\"checkin_pic\" width=\"98%\" style=\"margin-left:auto; margin-right:auto; display:block\">"
-				+ "<ul><li><a href= \"/\">Home</a></li>"
-				+ "<li><a href=\"/aboutus.jsp\">About Us</a></li>"
+		String headerString = "<ul><li><a href= \"/\">Home</a></li>"
+				+ "<li><a href=\"/aboutus.jsp\">About us</a></li>"
 				+ "<li><a href=\"/location.jsp\">Location</a></li>"
 				+ "<li><a href=\"/catalog\">Catalog</a></li>"
+				+ "<li><a href = \"/aboutme.jsp\">About me</a></li>"
 				+ "<li style=\"float:right\"><a href=\"/createaccount.jsp\">Create an account</a></li>"
 				+ "<li style=\"float:right\"><a href=\"/login.jsp\">Log in</a></li></ul>";
 		return headerString;
 	}
 	public static String headerString() {
 		//about us, location, catalog, log out, and gotta make an account info later on
-		String headerString = "<img src=\"libraryimage.jpg\" alt=\"checkin_pic\" width=\"98%\" style=\"margin-left:auto; margin-right:auto; display:block\">"
-				+ "<ul><li><a href= \"/\">Home</a></li>"
-				+ "<li><a href=\"/aboutus.jsp\">About Us</a></li>"
+		String headerString = "<ul><li><a href= \"/\">Home</a></li>"
+				+ "<li><a href=\"/aboutus.jsp\">About us</a></li>"
 				+ "<li><a href=\"/location.jsp\">Location</a></li>"
 				+ "<li><a href=\"/catalog\">Catalog</a></li>"
 				+ "<li><a href = \"userinfo\">User Info</a></li>"
+				+ "<li><a href = \"/aboutme.jsp\">About me</a></li>"
 				+ "<li style=\"float:right\"><a href=\"/logout\">Log out</a></li></ul>";
 		return headerString;
 	}
@@ -131,27 +131,27 @@ public class User {
 				"					<table style=\"padding: 10px 0; margin: 0; font-size: 0.8em;\">\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Monday</td>\r\n" + 
-				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"							<td>10 AM - 4 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Tuesday</td>\r\n" + 
-				"							<td>1:00 PM - 7:00 PM</td>\r\n" + 
+				"							<td>1 PM - 7 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Wednesday</td>\r\n" + 
-				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"							<td>10 AM - 4 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Thursday</td>\r\n" + 
-				"							<td>1:00 PM - 7:00 PM</td>\r\n" + 
+				"							<td>1 PM - 7 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Friday</td>\r\n" + 
-				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"							<td>10 AM - 4 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Saturday</td>\r\n" + 
-				"							<td>10:00 AM - 4:00 PM</td>\r\n" + 
+				"							<td>10 AM - 4 PM</td>\r\n" + 
 				"						</tr>\r\n" + 
 				"						<tr style=\"border-bottom: none\">\r\n" + 
 				"							<td>Sunday</td>\r\n" + 

@@ -10,10 +10,12 @@
 
 </head>
 <body>
-<div class="navbar"></div>
-<div class="content">
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 <%out.println(session.getAttribute("pageHeader")); %>
-
+<div class="content">
+<h1>Currently Borrowed</h1>
+<hr style="margin:5px">
+<p> Check off the books and press submit when customer is <b style="color:red">in store</b> and ready to return the book(s)</p>
 <form action="/putoffborrow">
 ${displayText}
 <input type="submit" value="Submit">

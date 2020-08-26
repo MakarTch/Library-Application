@@ -20,7 +20,7 @@ that I want to do for the picture above the header, yeah making those boxes on t
 }
 html, body{
 	margin:0;
-	font-size:20px;
+	font-size:18px;
 	background-color:#f2f2f2;   /*        */
 	/*height:100%;	*/
 	letter-spacing:1px;
@@ -44,6 +44,46 @@ html, body{
     /*box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);*/
     /*border-radius:10px; maybe put this back in */	
     /*overflow:hidden;*/
+    margin-left:15%;
+    margin-top:-1px;
+    border-radius:10px;
+    /*border: 1px solid rgb(217,217,217);*/
+    /*border: 1px solid rgb(204, 204, 255); */
+    border: 1px solid rgb(217,217,217);
+    padding: 15px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-left:15%;
+  width:70%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(217,217,217);
+  background-color: white;
+  border-radius:10px; 	
+  
+}
+
+li {
+  float: left;
+  font-size:16px;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(186, 214, 247);
+  transition:0.6s;
+  color: black;
+  box-shadow: 0px 0px 10px rgba(186, 214, 247, 1);
+  
 }
 .footer {
    /*position: sticky;*/
@@ -54,16 +94,22 @@ html, body{
    bottom: 0;*/
    width: 70%;
    /*height:auto;*/
-   /*background-color:lightblue; */
-   background-image:linear-gradient(rgb(77, 136, 255),rgb(204, 221, 255));   
+   /*background-image:linear-gradient(rgb(204, 136, 0),rgb(255, 221, 153));*/  
+   background-image:linear-gradient(rgb(204, 136, 0), white);      
    color: black;
    padding:0 30px;
    /*border-style:solid;*/
+   border-top-left-radius:10px;
+   border-top-right-radius:10px; 
+   border: 1px solid black;
+}
+h1 {
+	margin: 6px 0;
 }
  /* all forms and tables*/ 
-form{
+/*form{
 	margin-left:20px;
-}
+}*/
   
 input, select{
 	margin:8px 0;
@@ -88,30 +134,34 @@ input[type="submit"]{
 	font-size:0.8em;
 	cursor:pointer;
 	transition:0.5s;
-	border: var(--main-color);/*            */
+	border: 1px solid black;/*            */
     color:var(--main-color);/*            */
     background-color:white;
 }
 
 input[type="submit"]:hover{
-    color:white;
-	background-color:var(--main-color);
+	background-color:rgb(142, 188, 241);
     box-shadow: 0px 0px 10px rgba(0,0,0, 0.2);
+    border: 1px solid black;
 }
 input[type="radio"]{
 	margin-bottom:6px;
 }
 
 a:link{
-	color:var(--secondary-color);/*            */
+	/* color:var(--secondary-color);           */
 	text-decoration:none;
+	color:rgb(153, 102, 0);
 }
 a:visited{
 	color:var(--secondary-color);/*            */
+	color:rgb(153, 102, 0);
 }
 a:hover{
 	color:var(--main-color);/*            */
 	text-decoration:none;
+	color:black;
+	
 }
 a:active{
 	color:rgb(0,0,0);
@@ -145,35 +195,7 @@ th{
 tr:nth-child(even) {
 	/*background-color:rgb(245,245,245);*/
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: white;
-  border-radius:10px; 	
-  
-}
 
-li {
-  float: left;
-  font-size:16px;
-}
-
-li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: rgb(204, 204, 255);
-  transition:0.75s;
-  color: black;
-}
 
 /*MTA styles */
 .mta-bullet {

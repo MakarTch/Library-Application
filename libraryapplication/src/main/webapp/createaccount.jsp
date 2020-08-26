@@ -8,11 +8,13 @@
 
 </head>
 <body>
-<div class="navbar"></div>
-<div class="content">
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 <%out.println(session.getAttribute("pageHeader")); %>
-
-<form action="/createaccount">
+<div class="content">
+<h1>Create an Account</h1>
+<hr style="margin:5px">
+<div style=" display:block; text-align:center;margin-top:10px"> 
+<form action="/createaccount" style="display: inline-block; margin-left: auto; margin-right: auto;text-align:left;">
 <label for="firstName">First Name</label>
 <input type="text"  name="firstName" autocomplete ="off" required><br>
 <label for="lastName">Last Name</label>
@@ -24,7 +26,8 @@
 <label for="userPassword">Password</label>
 <input type="password"  name="userPassword" autocomplete ="off" required><br><!-- js here for input verification -->
 <input type="submit" value="Create Account!">
-</form>
+ </form>
+</div>
 <h2>Please contact administrator for a new Admin account</h2>
 </div>
 <%out.println(session.getAttribute("pageFooter"));%>

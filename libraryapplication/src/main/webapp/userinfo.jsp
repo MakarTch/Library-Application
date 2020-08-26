@@ -10,9 +10,9 @@
 
 </head>
 <body>
-<div class="navbar"></div>
-<div class="content">
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 ${pageHeader}
+<div class="content">
 <h3>What you have on hold</h3>
 ${OnHoldDisplayText}
 <h3>What you are currently borrowing</h3>

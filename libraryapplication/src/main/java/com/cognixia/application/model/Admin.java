@@ -76,13 +76,13 @@ public class Admin {
 	
 	public static String headerString() {
 		//about us, location, catalog, currently on hold, corrently borrowed, log out
-		String headerString = "<img src=\"libraryimage.jpg\" alt=\"checkin_pic\" width=\"98%\" style=\"margin-left:auto; margin-right:auto; display:block\">"
-				+ "<ul><li><a href= \"/\">Home</a></li>"
-				+ "<li><a href=\"/aboutus.jsp\">About Us</a></li>"  
+		String headerString = "<ul><li><a href= \"/\">Home</a></li>"
+				+ "<li><a href=\"/aboutus.jsp\">About us</a></li>"  
 				+ "<li><a href=\"/location.jsp\">Location</a></li>"
 				+ "<li><a href=\"/catalog\">Catalog</a></li>"
 				+ "<li><a href=\"/currentlyonhold\">Currently on hold</a></li>" 
 				+ "<li><a href=\"/currentlyborrowed\">Currently borrowed</a></li>"
+				+ "<li><a href = \"/aboutme.jsp\">About me</a></li>"
 				+ "<li style=\"float:right\"><a href=\"/logout\">Log out</a></li></ul>";
 		return headerString;
 	}

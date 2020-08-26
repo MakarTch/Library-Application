@@ -9,27 +9,65 @@
 <link rel="icon" href="https://www.clipartmax.com/png/middle/155-1559319_learn-open-book-icon-vector.png">
 <style>
 #map {
+	float:right;
 	height: 600px;
-	width: 100%;
+	width: 59%;
 	margin: 4px;
 }
 </style>
 </head>
-<body><!-- Might put the map more on the right then put just 6 (icon of 6 train) to <trainstop> and do that to allof them
-	def a possibility, for not this is good, just gotta pad it up when im styling the inner content later. but this is good for now. 
-	maybe make font bigger for this page too 
-	change this to location and hours-->
-<div class="navbar"></div>
+<body>
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 
-<div class="content">
 <%out.println(session.getAttribute("pageHeader")); %>
-To get to the Central Library:<br>
-<span class='mta-bullet mta-2'>2</span><span class='mta-bullet mta-3'> 3</span> to Eastern Pkway Brooklyn Museum<br>
-<span class='mta-bullet mta-b'>B</span><span class='mta-bullet mta-q'> Q</span> to 7<sup>th</sup> Ave<br>
-B41 Bus to Grand Army Plaza<br>
-If you are driving we have a parking lot accessible from Eastern Parkway!<br>
-<div id="map"></div>
-</div>
+<div class="content">
+<h1>Location & Directions</h1>
+		<hr style="margin: 5px">
+		<div style="float: left; width: 40%;">
+			<h4>To get to the Central Library:</h4>
+			<p>
+				<span class='mta-bullet mta-2'>2</span><span
+					class='mta-bullet mta-3'> 3</span> to Eastern Pkway Brooklyn Museum
+			</p>
+			 <p><span class='mta-bullet mta-b'>B</span><span
+				class='mta-bullet mta-q'> Q</span> to 7<sup>th</sup> Ave</p>
+			<p>B41 Bus to Grand Army Plaza</p> 
+			<p>If you are driving we have a parking lot accessible from Eastern Parkway!</p>
+
+			<h4>Hours:</h4>
+			<table style="padding: 10px 0; margin: 0;">
+				<tr style="border-bottom: none">
+					<td>Monday</td>
+					<td>10:00 AM - 4:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Tuesday</td>
+					<td>1:00 PM - 7:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Wednesday</td>
+					<td>10:00 AM - 4:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Thursday</td>
+					<td>1:00 PM - 7:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Friday</td>
+					<td>10:00 AM - 4:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Saturday</td>
+					<td>10:00 AM - 4:00 PM</td>
+				</tr>
+				<tr style="border-bottom: none">
+					<td>Sunday</td>
+					<td>Closed</td>
+				</tr>
+			</table>
+		</div>
+		<div id="map"></div>
+	</div>
 
 <%out.println(session.getAttribute("pageFooter"));%>
 <script>

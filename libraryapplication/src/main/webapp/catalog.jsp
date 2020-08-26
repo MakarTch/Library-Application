@@ -10,12 +10,15 @@
 
 </head>
 <body>
-<div class="navbar"></div>
-<div class="content">
-<form action="/putonhold">
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
+
 <%out.println(session.getAttribute("pageHeader")); %>
+<div class="content">
+<h1>Book Catalog</h1>
+<hr style="margin:5px">
+<form action="/putonhold">
 ${displayText}
-<input type="submit" value="Put on Hold!">
+<input type="submit" value="Put on Hold!" style="float:right">
 </form>
 </div>
 <%out.println(session.getAttribute("pageFooter"));%>

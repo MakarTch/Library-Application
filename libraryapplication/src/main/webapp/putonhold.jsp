@@ -10,9 +10,9 @@
 
 </head>
 <body>
-<div class="navbar"></div>
-<div class="content">
+<img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 <%out.println(session.getAttribute("pageHeader")); %>
+<div class="content">
 
 <h1>Your ${books} been put on hold!</h1>
 
