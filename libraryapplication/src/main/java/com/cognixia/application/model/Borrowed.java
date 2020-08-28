@@ -72,7 +72,7 @@ public class Borrowed {
 	}
 
 	public static String tableHeader() {
-		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th><th>Returned</th></tr>";
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book Title</th><th>On Hold Time</th><th>Returned</th></tr>";
 		return header;
 	}
 
@@ -86,7 +86,7 @@ public class Borrowed {
 }
 
 	public static String withoutChecksTableHeader() {
-		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book ISBN</th><th>On Hold Time</th></tr>";
+		String header = "<table><tr><th>Transaction ID</th><th>User Id</th><th>Book Title</th><th>On Hold Time</th></tr>";
 		return header;
 	}
 
