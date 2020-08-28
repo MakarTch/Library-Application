@@ -18,7 +18,7 @@
 <hr style="margin:5px">
 <form action="/putonhold">
 ${displayText}
-<input type="submit" value="Put on Hold!" style="float:right">
+
 </form>
 </div>
 <%out.println(session.getAttribute("pageFooter"));%>

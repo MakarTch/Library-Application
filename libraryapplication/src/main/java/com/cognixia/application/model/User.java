@@ -83,8 +83,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userPassword=" + userPassword + ", lastName=" + lastName + ", firstName="
-				+ firstName + ", email=" + email + ", phoneNumber=" + phoneNumber + "]";
+		return "<table><tr><th>User ID</th><th>Password</th><th>Last Name</th><th>First Name</th><th>Email</th><th>Phone Number</th></tr>"
+				+ "<tr><td>" + userId + "</td><td>" + userPassword + "</td><td>" + lastName + "</td><td>" + firstName +"</td><td>" + email + "</td><td>" + phoneNumber
+				+ "</td></tr></table>";
 	}
 
 	public static String nonUserHeaderString() {
@@ -171,5 +172,6 @@ public class User {
 				"	</table>\r\n" + 
 				"</div>\r\n";
 	}
+
 	
 }

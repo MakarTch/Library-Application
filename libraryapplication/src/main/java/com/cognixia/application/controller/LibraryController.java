@@ -61,7 +61,7 @@ public class LibraryController {
 			session.setAttribute("adminId", null);
 			session.setAttribute("pageHeader", User.headerString());
 		}else {
-			//error login page
+			return "errorlogin.jsp";
 		}
 		return ("/");
 	}
@@ -73,7 +73,7 @@ public class LibraryController {
 			session.setAttribute("userId", null);
 			session.setAttribute("pageHeader", Admin.headerString());
 		}else {
-			//error login page
+			return "errorlogin.jsp";
 		}
 		return "/";
 	}
@@ -97,6 +97,9 @@ public class LibraryController {
 			}
 		}
 		displayText += Book.tableFooter();
+		if (session.getAttribute("userId")!=null) {
+			displayText+= Book.submitButton();
+		}
 		mv.addObject("displayText", displayText);
 		return mv;//I gotta make this so that the books with a stock of 0 dont display
 	}
@@ -181,6 +184,8 @@ public class LibraryController {
 	@GetMapping("/userinfo")
 	public ModelAndView userInfo(HttpSession session) {
 		ModelAndView mv = new ModelAndView("userinfo.jsp");
+		String accountInfo= userRepo.findByUserId((int)session.getAttribute("userId")).toString();
+		mv.addObject("accountInfo", accountInfo);
 		String onHoldDisplayText = OnHold.withoutChecksTableHeader();
 		List <OnHold> onHoldList = onHoldRepo.findAllByUserId((int)session.getAttribute("userId"));
 		for (OnHold onHold : onHoldList) {
@@ -196,7 +201,7 @@ public class LibraryController {
 		}
 		borrowDisplayText += Borrowed.tableFooter();
 		mv.addObject("BorrowedDisplayText", borrowDisplayText);
-		
+		mv.addObject("userName", userRepo.findByUserId((int)session.getAttribute("userId")).getFirstName());
 		return mv;
 	}
 	

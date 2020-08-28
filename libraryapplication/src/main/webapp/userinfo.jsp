@@ -13,6 +13,10 @@
 <img src="libraryimage.jpg" alt="checkin_pic" width="69%" style=" display:block;margin-left:15.5%;">
 ${pageHeader}
 <div class="content">
+<h1>${userName}'s Info</h1>
+<hr style="margin:5px">
+<h3>Account information</h3>
+${accountInfo}
 <h3>What you have on hold</h3>
 ${OnHoldDisplayText}
 <h3>What you are currently borrowing</h3>

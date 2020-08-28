@@ -74,7 +74,7 @@ public class Book {
 			return "";
 		}
 		return "<tr><td>" + bookISBN + "</td><td>" + bookTitle + "</td><td>" + author + "</td><td>" + inStock
-				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + bookISBN + "\" ></td></tr>";
+				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + bookISBN + "\"style=\"margin:0\" ></td></tr>";
 	}
 	
 	public static String tableFooter() {
@@ -93,6 +93,10 @@ public class Book {
 	public static String withoutChecksTableHeader() {
 		String header = "<table><tr><th>Book ISBN</th><th>Title</th><th>Author</th><th>In Stock</th></tr>";
 		return header;
+	}
+
+	public static String submitButton() {
+		return "<input type=\"submit\" value=\"Put on Hold!\" style=\"float:right\">";
 	}
 	
 	
