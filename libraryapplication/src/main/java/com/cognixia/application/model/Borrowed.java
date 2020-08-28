@@ -76,9 +76,8 @@ public class Borrowed {
 		return header;
 	}
 
-	@Override
-	public String toString() {
-		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+	public String toString(String bookName) {
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookName + "</td><td>" + transactionTime
 				+ "</td><td><input type=\"checkbox\" name = \"book\" value=\"" + transactionId + "\" ></td></tr>";
 	}
 
@@ -91,8 +90,8 @@ public class Borrowed {
 		return header;
 	}
 
-	public String withoutChecksToString() {
-		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookISBN + "</td><td>" + transactionTime
+	public String withoutChecksToString(String bookName) {
+		return "<tr><td>" + transactionId + "</td><td>" + userId + "</td><td>" + bookName + "</td><td>" + transactionTime
 				+ "</td></tr>";
 	}
 	

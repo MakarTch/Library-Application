@@ -13,7 +13,7 @@
 ${pageHeader}
 <div class="content">
 
-<h1 >About Us</h1><!--  &nbsp;-->
+<h1 >About Us</h1>
 		<hr style="margin: 5px">
 		<table style="font-size:1.1em">
 			<tr>

@@ -78,9 +78,11 @@ public class LibraryController {
 		return "/";
 	}
 	@GetMapping("/createaccount")
-	public String createaccount(User user) {
+	public ModelAndView createaccount(User user) {
+		ModelAndView mv = new ModelAndView("/login.jsp");
 		userRepo.save(user);
-		return "/";//or maybe an account created thing, or straight to the login page, somethign like that
+		mv.addObject("newAccount", "New account has been created with User ID:" + user.getUserId() + " and Password:" + user.getUserPassword() + ", dont forget these!");
+		return mv;
 	}
 
 	@GetMapping("/catalog")
@@ -101,7 +103,7 @@ public class LibraryController {
 			displayText+= Book.submitButton();
 		}
 		mv.addObject("displayText", displayText);
-		return mv;//I gotta make this so that the books with a stock of 0 dont display
+		return mv;
 	}
 	@GetMapping("/putonhold")
 	public ModelAndView putOnHold(HttpSession session, HttpServletRequest request) {
@@ -129,7 +131,8 @@ public class LibraryController {
 		List <OnHold> onHoldList = onHoldRepo.findAll();
 		String displayText = OnHold.tableHeader();
 		for (OnHold onHold : onHoldList) {
-			displayText+= onHold.toString();
+			String bookName = bookRepo.findByBookISBN(onHold.getBookISBN()).getBookTitle();
+			displayText+= onHold.toString(bookName);
 		}
 		displayText += OnHold.tableFooter();
 		mv.addObject("displayText", displayText);
@@ -159,7 +162,8 @@ public class LibraryController {
 		List <Borrowed> borrowedList = borrowedRepo.findAll();
 		String displayText = Borrowed.tableHeader();
 		for (Borrowed borrowed : borrowedList) {
-			displayText+= borrowed.toString();
+			String bookName = bookRepo.findByBookISBN(borrowed.getBookISBN()).getBookTitle();
+			displayText+= borrowed.toString(bookName);
 		}
 		displayText += Borrowed.tableFooter();
 		mv.addObject("displayText", displayText);
@@ -189,7 +193,8 @@ public class LibraryController {
 		String onHoldDisplayText = OnHold.withoutChecksTableHeader();
 		List <OnHold> onHoldList = onHoldRepo.findAllByUserId((int)session.getAttribute("userId"));
 		for (OnHold onHold : onHoldList) {
-				onHoldDisplayText+= onHold.withoutChecksToString();
+			String bookName = bookRepo.findByBookISBN(onHold.getBookISBN()).getBookTitle();
+			onHoldDisplayText+= onHold.withoutChecksToString(bookName);
 		}
 		onHoldDisplayText += OnHold.tableFooter();
 		mv.addObject("OnHoldDisplayText", onHoldDisplayText);
@@ -197,7 +202,8 @@ public class LibraryController {
 		String borrowDisplayText = Borrowed.withoutChecksTableHeader();
 		List <Borrowed> borrowList = borrowedRepo.findAllByUserId((int)session.getAttribute("userId"));
 		for (Borrowed borrow : borrowList) {
-				borrowDisplayText+= borrow.withoutChecksToString();
+			String bookName = bookRepo.findByBookISBN(borrow.getBookISBN()).getBookTitle();
+			borrowDisplayText+= borrow.withoutChecksToString(bookName);
 		}
 		borrowDisplayText += Borrowed.tableFooter();
 		mv.addObject("BorrowedDisplayText", borrowDisplayText);

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>insert user name info?</title>
+<title>${userName}'s Info</title>
 <link rel="stylesheet" href="librarystyle.css">
 <link rel="icon" href="https://www.clipartmax.com/png/middle/155-1559319_learn-open-book-icon-vector.png">
 

@@ -89,7 +89,6 @@ public class User {
 	}
 
 	public static String nonUserHeaderString() {
-		//about us, location, catalog, create and account, log in
 		String headerString = "<ul><li><a href= \"/\">Home</a></li>"
 				+ "<li><a href=\"/aboutus.jsp\">About us</a></li>"
 				+ "<li><a href=\"/location.jsp\">Location</a></li>"
@@ -100,7 +99,6 @@ public class User {
 		return headerString;
 	}
 	public static String headerString() {
-		//about us, location, catalog, log out, and gotta make an account info later on
 		String headerString = "<ul><li><a href= \"/\">Home</a></li>"
 				+ "<li><a href=\"/aboutus.jsp\">About us</a></li>"
 				+ "<li><a href=\"/location.jsp\">Location</a></li>"

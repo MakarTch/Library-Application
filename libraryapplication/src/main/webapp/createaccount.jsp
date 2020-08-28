@@ -20,11 +20,11 @@
 <label for="lastName">Last Name</label>
 <input type="text"  name="lastName" autocomplete ="off" required><br>
 <label for="phoneNumber">Contact Number</label>
-<input type="text"  name="phoneNumber" autocomplete ="off" required><br><!-- js here for input verification -->
+<input type="text"  name="phoneNumber" autocomplete ="off" required><br>
 <label for="email">Email</label>
 <input type="text" name="email" autocomplete="off" required><br>
 <label for="userPassword">Password</label>
-<input type="password"  name="userPassword" autocomplete ="off" required><br><!-- js here for input verification -->
+<input type="password"  name="userPassword" autocomplete ="off" required><br>
 <input type="submit" value="Create Account!">
  </form>
 </div>

@@ -1,13 +1,5 @@
 @charset "ISO-8859-1";
 
-/*
-Ok so I have to figure out what to do with the length. thats def step one. 
-or maybe step one is going to be making my navbar look nice, populating my static pages with content, gotta figure out how to make the pictures
-scrolling thing, also make the navbar sticky, there was also some dope shit I saw with the picture zooming out shit when I scroll
-that I want to do for the picture above the header, yeah making those boxes on the navbar look good shouldnt be to crazy hard. 
-*/
-
-
 :root{
 	--main-color: black;
 	--light-main-color:grey;
@@ -22,11 +14,9 @@ html, body{
 	margin:0;
 	font-size:18px;
 	background-color:#f2f2f2;   /*        */
-	/*height:100%;	*/
 	letter-spacing:1px;
 	font-family:'Adamina';
 	overflow:auto;
-	/*background-image:linear-gradient(var(--light-main-color),var(--main-color));           */
 }
 .navbar{
 	float:left;
@@ -35,20 +25,12 @@ html, body{
 	font-size:0.9em;
 }
 .content{
-	/*margin-top:0;*/
 	float:left;
 	width:70%;
-	/*height:98%;*/
-	/*padding:40px;*/
-	background-color:white;/* Yeah prolly gonna have to make an inner content part of the page*/
-    /*box-shadow: 0 3px 3px 4px rgba(0, 0, 0, .1);*/
-    /*border-radius:10px; maybe put this back in */	
-    /*overflow:hidden;*/
+	background-color:white;
     margin-left:15%;
     margin-top:-1px;
     border-radius:10px;
-    /*border: 1px solid rgb(217,217,217);*/
-    /*border: 1px solid rgb(204, 204, 255); */
     border: 1px solid rgb(217,217,217);
     padding: 15px;
 }
@@ -86,19 +68,12 @@ li a:hover {
   
 }
 .footer {
-   /*position: sticky;*/
-   /*margin-top:30px;*/
    float:left;
    margin-left:15%;
-   /*left: 0;
-   bottom: 0;*/
    width: 70%;
-   /*height:auto;*/
-   /*background-image:linear-gradient(rgb(204, 136, 0),rgb(255, 221, 153));*/  
    background-image:linear-gradient(rgb(204, 136, 0), white);      
    color: black;
    padding:0 30px;
-   /*border-style:solid;*/
    border-top-left-radius:10px;
    border-top-right-radius:10px; 
    border: 1px solid black;
@@ -107,9 +82,6 @@ h1 {
 	margin: 6px 0;
 }
  /* all forms and tables*/ 
-/*form{
-	margin-left:20px;
-}*/
   
 input, select{
 	margin:8px 0;
@@ -149,7 +121,6 @@ input[type="radio"]{
 }
 
 a:link{
-	/* color:var(--secondary-color);           */
 	text-decoration:none;
 	color:rgb(153, 102, 0);
 }
@@ -171,8 +142,6 @@ table{
 	margin:auto;
 	margin-top:10px;
 	margin-top:10px;
-	/*width:70%;*/
-	/*outline:4px ridge var(--lighter-main-color);*//*            */
 	border-collapse:collapse;	
 }
 tr{
@@ -192,10 +161,6 @@ th{
 	border-bottom: 1px solid rgb(150,150,150);	
 	
 }
-tr:nth-child(even) {
-	/*background-color:rgb(245,245,245);*/
-}
-
 
 /*MTA styles */
 .mta-bullet {
