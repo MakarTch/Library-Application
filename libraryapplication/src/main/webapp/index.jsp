@@ -53,7 +53,7 @@ img {
 <h1>Welcome to the Central Library website!</h1>
 		<hr style="margin: 5px">
 <!-- <p>Located by Brooklyn's Prospect Park, the Brooklyn Public Library Central Branch has been serving the residents of 
-Brooklyn since 1941. Please </p> -->
+Brooklyn since 1941. Please </p> comment comment comment-->
 
 <p>The purpose of this website is to make the process of finding a book, putting it on hold, retrieving it from the library, then finally 
 returning it back to the library a very simple and straight forward process. Log in as a user and go through our catalog and check off the books 
