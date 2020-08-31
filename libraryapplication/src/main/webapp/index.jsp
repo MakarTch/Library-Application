@@ -52,25 +52,34 @@ img {
 
 <h1>Welcome to the Central Library website!</h1>
 		<hr style="margin: 5px">
-<p>Located by Brooklyn's Prospect Park, the Brooklyn Public Library Central Branch has been serving the residents of 
-Brooklyn since 1941. Create an account or log in to put your desired book(s) on hold, then come to our location to pick them up!</p>
+<!-- <p>Located by Brooklyn's Prospect Park, the Brooklyn Public Library Central Branch has been serving the residents of 
+Brooklyn since 1941. Please </p> -->
+
+<p>The purpose of this website is to make the process of finding a book, putting it on hold, retrieving it from the library, then finally 
+returning it back to the library a very simple and straight forward process. Log in as a user and go through our catalog and check off the books 
+that you want to put them on hold! 
+After that, come to the library to retrieve your book(s) and one of our admins will make sure to log your book as borrowed. Then come
+back to the library with your book(s) to return when you're done reading. Our admin will mark your book(s) as returned and place all books back 
+into our catalog! 
+</p>
+
 <p>If you're not feeling up to all the work of creating a new account, you may log in as a user with a User ID of <i>1</i> and password of <i>password</i>.
 To use Admin privileges you may log in with Admin ID of <i>1000</i> and password of <i>password</i>.</p>
 <div class="container">
   <div class="mySlides">
-    <img src="DSC05934.JPG" style="width:100%">
+    <img src="DSC05934.JPG" style="width:100%; border-radius:5px">
   </div>
 
   <div class="mySlides">
-    <img src="DSC05961.JPG" style="width:100%">
+    <img src="DSC05961.JPG" style="width:100%; border-radius:5px">
   </div>
     
   <div class="mySlides">
-    <img src="DSC05967.JPG" style="width:100%">
+    <img src="DSC05967.JPG" style="width:100%; border-radius:5px">
   </div>
   
   <div class="mySlides">
-    <img src="libraryimage2.JPG" style="width:100%">
+    <img src="libraryimage2.JPG" style="width:100%; border-radius:5px">
   </div>
     
   <a class="prev" onclick="plusSlides(-1)">&#171;</a>
@@ -90,12 +99,10 @@ function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
