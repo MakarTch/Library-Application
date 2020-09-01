@@ -3,6 +3,8 @@ package com.cognixia.application.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,6 +111,7 @@ public class LibraryController {
 	public ModelAndView putOnHold(HttpSession session, HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("putonhold.jsp");
 		Date date = new Date();
+		TimeZone.setDefault(TimeZone.getTimeZone("US/Eastern"));
 		SimpleDateFormat formatter = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
 		String strDate = formatter.format(date);
 		int userId = (int) session.getAttribute("userId");
@@ -143,6 +146,7 @@ public class LibraryController {
 	public ModelAndView putOnBorrow(HttpSession session, HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView("putonborrow.jsp");
 		Date date = new Date();
+		TimeZone.setDefault(TimeZone.getTimeZone("US/Eastern"));
 		SimpleDateFormat formatter = new SimpleDateFormat("E, dd MMM yyyy HH:mm z");
 		String strDate = formatter.format(date);
 		String[] values = request.getParameterValues("book");
