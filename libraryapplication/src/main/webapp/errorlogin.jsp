@@ -19,9 +19,9 @@
 <form action="/userAccount" style= "padding:50px">
 	<h2>User Login</h2>
 	<label for="userId">User Id</label>
-	<input type="number" name="userId" value=1 required><br>
+	<input type="number" name="userId" required><br>
 	<label for="password">Password</label>
-	<input type="password" name="userPassword" value="password" required><br>
+	<input type="password" name="userPassword" required><br>
 	<input type="submit" value="Log In">
 </form>
 </td>
@@ -29,9 +29,9 @@
 <form action="/adminAccount" style= "padding:50px; ">
 	<h2>Admin Login</h2>
 	<label for="adminId">Admin Id</label>
-	<input type="number" name="adminId" value=1000 required><br>
+	<input type="number" name="adminId" required><br>
 	<label for="password">Password</label>
-	<input type="password" name="adminPassword" value="password" required><br>
+	<input type="password" name="adminPassword" required><br>
 	<input type="submit" value="Log In">
 </form>
 </td>
